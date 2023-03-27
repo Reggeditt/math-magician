@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Calculator() {
+  // const [operand, setOperand] = useState([]);
   return (
     <div className="calculator-wrap">
       <div className="calculator-display">0</div>
