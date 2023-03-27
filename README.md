@@ -104,6 +104,8 @@ git clone https://github.com/Reggeditt/math-magician.git
 Install this project with:
 ```
 npm i
+
+npm run build
 ```
 ### Usage
 
