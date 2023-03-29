@@ -1,17 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
 function Calculator() {
-  const display = useRef(null);
-  let result = { total: null, next: null, operation: null };
+  const [output, setOutput] = useState('0');
+  const [result, setResult] = useState({ total: null, next: null, operation: null });
+
   const getButtonName = (e) => {
     const buttonName = e.target.textContent;
-    result = calculate(result, buttonName);
-    display.current.textContent = result.next || result.operation || result.total || '0';
+    setResult(calculate(result, buttonName));
   };
+
+  React.useEffect(() => {
+    setOutput(result.next || result.operation || result.total || '0');
+  }, [result]);
   return (
     <div className="calculator-wrap">
-      <div ref={display} className="calculator-display">0</div>
+      <div className="calculator-display">{output}</div>
       <div className="calculator-keypads">
         <button className="key1" type="button" onClick={getButtonName}>AC</button>
         <button className="key2" type="button" onClick={getButtonName}>+/-</button>
