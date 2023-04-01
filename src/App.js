@@ -20,7 +20,7 @@ function App() {
         setQuote(res);
       })
       .catch((error) => setQuote(['error ', error.message, ' quote']));
-  }, [result]);
+  }, []);
 
   return (
     <div className="App">
