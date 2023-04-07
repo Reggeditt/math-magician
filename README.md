@@ -78,7 +78,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link is not yet available]()
+- Live Demo Link is not yet available
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
