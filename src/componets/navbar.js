@@ -1,11 +1,15 @@
 function Navbar() {
+  const links = [
+    { name: 'Home', path: '/' },
+    { name: 'Calculator', path: '/calculator' },
+    { name: 'Quote', path: '/quote' },
+  ];
+
   return (
     <div className="navbar">
       <div className="navbar-brand"><h1>Math Magicians</h1></div>
       <div className="navbar-items">
-        <a className="navbar-item" href="/">Home</a>
-        <a className="navbar-item" href="/">Calculator</a>
-        <a className="navbar-item" href="/">Quote</a>
+        {links.map((link) => <a key={link.name} className="navbar-item" href={link.path}>{link.name}</a>)}
       </div>
     </div>
   );

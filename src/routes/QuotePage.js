@@ -7,7 +7,12 @@ function Quote() {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://type.fit/api/quotes')
+    fetch('https://api.api-ninjas.com/v1/quotes?category=computers&&limit=1', {
+      method: 'GET',
+      headers: {
+        'X-API-Key': 'OAcvP3F39QWUffY523tlRg==3Y15nTus6njhSQ1w',
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         setLoading(false);
@@ -31,8 +36,8 @@ function Quote() {
     <div>
       <h1>Quote</h1>
       {quotes.map((quote) => (
-        <div key={quote.text}>
-          <p>{quote.text}</p>
+        <div key={quote.quote}>
+          <p>{quote.quote}</p>
           <p>{quote.author}</p>
         </div>
       ))}
