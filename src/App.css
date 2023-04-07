@@ -4,39 +4,8 @@
   padding: 0;
 }
 
-.calculator-wrap {
-  width: 500px;
-  margin: 6rem auto;
-  background-color: red;
-  display: flex;
-  flex-direction: column;
-}
-
-.calculator-display {
-  background-color: #858693;
+.App {
+  width: 100vw;
+  height: 100vw;
   padding: 20px;
-  text-align: right;
-}
-
-.calculator-keypads {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.calculator-keypads > * {
-  padding: 20px;
-  background-color: #e0e0e0;
-  cursor: pointer;
-}
-
-.key17 {
-  grid-column: span 2;
-}
-
-.key4,
-.key8,
-.key12,
-.key16,
-.key19 {
-  background-color: #ed913d;
 }

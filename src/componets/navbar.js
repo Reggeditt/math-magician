@@ -1,3 +1,5 @@
+import '../styles/Navbar.css';
+
 function Navbar() {
   const links = [
     { name: 'Home', path: '/' },

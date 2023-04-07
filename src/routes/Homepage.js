@@ -1,7 +1,8 @@
+import '../styles/homepage.css';
+
 function Homepage() {
   return (
-    <div>
-      <h1>Homepage</h1>
+    <div className="home-page">
       <h3>Welcome to our page!</h3>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ipsa sint nulla
