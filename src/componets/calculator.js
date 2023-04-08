@@ -12,7 +12,7 @@ function Calculator() {
   };
 
   React.useEffect(() => {
-    setOutput(result.next || result.operation || result.total || '0');
+    setOutput(result.next || result.operation || result.total || '');
   }, [result]);
   return (
     <div className="calculator-wrap">
