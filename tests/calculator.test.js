@@ -28,5 +28,5 @@ describe('Calculator', () => {
     fireEvent.click(getByText('1'));
     fireEvent.click(getByText('AC'));
     expect(getByText('0')).toBeInTheDocument();
-  });
+  });
 });
