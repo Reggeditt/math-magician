@@ -23,4 +23,10 @@ describe('Calculator', () => {
     expect(getByText('3')).toBeInTheDocument();
   });
 
+  it('clears the display when the AC button is clicked', () => {
+    const { getByText } = render(<Calculator />);
+    fireEvent.click(getByText('1'));
+    fireEvent.click(getByText('AC'));
+    expect(getByText('0')).toBeInTheDocument();
+  });
 });
