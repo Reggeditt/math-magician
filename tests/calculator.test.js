@@ -1,11 +1,17 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import Calculator from '../src/componets/calculator';
 
 describe('Calculator', () => {
   it('renders the component', () => {
     const { getByText } = render(<Calculator />);
     expect(getByText('0')).toBeInTheDocument();
+  });
+
+  it('creates snapshot', () => {
+    const calculator = renderer.create(<Calculator />).toJSON();
+    expect(calculator).toMatchSnapshot();
   });
 
   it('updates the display when a button is clicked', () => {
