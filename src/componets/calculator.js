@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
+import '../styles/calculator.css';
 
 function Calculator({ result, setResult }) {
   const [output, setOutput] = useState('0');
@@ -11,7 +12,7 @@ function Calculator({ result, setResult }) {
   };
 
   React.useEffect(() => {
-    setOutput(result.next || result.operation || result.total || '0');
+    setOutput(result.next || result.operation || result.total || '');
   }, [result]);
   return (
     <div className="calculator-wrap">
