@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 import '../styles/calculator.css';
 
-function Calculator() {
+function Calculator({ result, setResult }) {
   const [output, setOutput] = useState('0');
-  const [result, setResult] = useState({ total: null, next: null, operation: null });
 
   const getButtonName = (e) => {
     const buttonName = e.target.textContent;
@@ -41,5 +41,10 @@ function Calculator() {
     </div>
   );
 }
+
+Calculator.propTypes = {
+  result: PropTypes.shape({ total: null, next: null, operation: null }).isRequired,
+  setResult: PropTypes.func.isRequired,
+};
 
 export default Calculator;
